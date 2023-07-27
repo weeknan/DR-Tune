@@ -1,0 +1,27 @@
+#------------------>base config
+workers: 4
+epochs: 100 
+start_epoch: 0 
+batch_size: 64
+print_freq: 10 
+save_ckpt: True
+#------------------>optimizer config
+lr: [0.01, 0.33]
+cos: True
+step: False
+linear: False
+momentum: 0.9 
+weight_decay: 1e-4
+nesterov: True
+#------------------>test config
+test: True
+test_freq: 1
+#------------------>retraining config
+resume: False
+seed: 1
+#------------------>data config
+crop_size: 224
+num_classes: 10
+
+pretrained: "./pretrained_models/moco_v2_800ep_pretrain.pth.tar"
+K: 2048
