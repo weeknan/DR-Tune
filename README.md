@@ -56,18 +56,3 @@ CIFAR10 will be automatically downloaded to ```  ./data```.
 bash train.sh 1 --cfg ./configs/cifar10_k2048_lr001.yaml
 ```
 
-
-
-## Citation
-
-If you find this repository useful, please kindly consider citing the following paper:
-
-```
-@article{dr_tune,
-  title={DR-Tune: Improving Fine-tuning of Pretrained Visual Models
-		by Distribution Regularization with Semantic Calibration},
-  author={},
-  journal={arXiv},
-  year={2023}
-}
-```
