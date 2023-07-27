@@ -5,7 +5,7 @@ import math
 import torch
 import yaml
 
-from torch.utils.tensorboard import SummaryWriter
+# from torch.utils.tensorboard import SummaryWriter
 
 LOG_FORMAT = "%(asctime)s - %(message)s"
 DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
@@ -46,27 +46,27 @@ class Logger(object):
         else:
             self.__logger.info(msg)
 
-class Writter:
-    def __init__(self, work_dir, local_rank):
-        self.work_dir = work_dir
-        self.local_rank = local_rank
-        if local_rank == 0:
-            self.writter = SummaryWriter(os.path.join(self.work_dir, 't'))
+# class Writter:
+#     def __init__(self, work_dir, local_rank):
+#         self.work_dir = work_dir
+#         self.local_rank = local_rank
+#         if local_rank == 0:
+#             self.writter = SummaryWriter(os.path.join(self.work_dir, 't'))
 
-    def write_tensorboard(self, i, dict_record, tag):
-        if self.local_rank != 0:
-            return
+#     def write_tensorboard(self, i, dict_record, tag):
+#         if self.local_rank != 0:
+#             return
 
-        for key in dict_record.keys():
-            #if here is during test func, we record the averange result to tensorboard;
-            if tag == 'test':
-                self.writter.add_scalar(tag=tag+'/'+key,
-                                    scalar_value=dict_record[key].avg,
-                                    global_step=i)
-            else:
-                self.writter.add_scalar(tag=tag+'/'+key,
-                                        scalar_value=dict_record[key].val,
-                                        global_step=i)
+#         for key in dict_record.keys():
+#             #if here is during test func, we record the averange result to tensorboard;
+#             if tag == 'test':
+#                 self.writter.add_scalar(tag=tag+'/'+key,
+#                                     scalar_value=dict_record[key].avg,
+#                                     global_step=i)
+#             else:
+#                 self.writter.add_scalar(tag=tag+'/'+key,
+#                                         scalar_value=dict_record[key].val,
+#                                         global_step=i)
         
 def accuracy(output, target, topk=(1,)):
     """Computes the accuracy over the k top predictions for the specified values of k"""

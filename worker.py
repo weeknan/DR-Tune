@@ -152,7 +152,7 @@ def train(train_loader, model, criterion, optimizer, epoch, args):
         if i % args.print_freq == 0:
             progress.display(i)
 
-        args.writter.write_tensorboard(epoch*len(train_loader)+i, dict_record, 'train')
+        # args.writter.write_tensorboard(epoch*len(train_loader)+i, dict_record, 'train')
         
 def test(test_loader, model, epoch, args):
     record_config = ['Acc@1', 'Acc@5', 'Best_Acc@1', 'Best_epoch']
@@ -183,7 +183,7 @@ def test(test_loader, model, epoch, args):
     dict_record['Best_epoch'].update(Best_Epoch, 1)
 
     progress.display(-1)
-    args.writter.write_tensorboard(epoch, dict_record, 'test')
+    # args.writter.write_tensorboard(epoch, dict_record, 'test')
 
     return is_bast
 

@@ -47,8 +47,8 @@ def main():
     args.logger = Logger(log_file_name=args.log_file_name,
                          work_dir=args.work_dir,
                          local_rank=args.local_rank)
-    args.writter = Writter(work_dir=args.work_dir,
-                           local_rank=args.local_rank)          
+    # args.writter = Writter(work_dir=args.work_dir,
+    #                        local_rank=args.local_rank)          
 
     main_worker(args)
     
