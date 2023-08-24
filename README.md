@@ -1,28 +1,27 @@
 # DR-Tune
-This repository is an official PyTorch implementation of **DR-Tune**: Improving Fine-tuning of Pretrained Visual Models by **D**istribution **R**egularization with Semantic Calibration (ICCV2023).
+
+
+[https://arxiv.org/abs/2308.12058](https://github.com/dongzelian/SSF)
+
+This repository is an official PyTorch implementation of DR-Tune: Improving Fine-tuning of Pretrained Visual Models by Distribution Regularization with Semantic Calibration (ICCV2023).
 
 <img src="./pipeline.png" alt="DR-Tune" style="zoom: 40%;" />
 
 
+## Usage
 
-## Environments
+### Environments
 
 * python 3.9.7
 * pytorch 1.13.1
 * torchvision 0.14.1
 * GPU NVIDIA GeForce RTX 2080 Ti
 
-
-
-## Usage
-
-
 ### Dataset preparation
 
 The datasets used in Table 1 can be downloaded via their official link. 
 
 The datasets used in Table 2 can be downloaded from [here](https://github.com/dongzelian/SSF) and see "vtab-1k". 
-
 
 
 ### Pretrained model preparation
