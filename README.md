@@ -1,7 +1,7 @@
 # DR-Tune
 
 
-[https://arxiv.org/abs/2308.12058](https://github.com/dongzelian/SSF)
+[https://arxiv.org/abs/2308.12058](https://arxiv.org/abs/2308.12058)
 
 This repository is an official PyTorch implementation of DR-Tune: Improving Fine-tuning of Pretrained Visual Models by Distribution Regularization with Semantic Calibration (ICCV2023).
 
