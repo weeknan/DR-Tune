@@ -59,10 +59,11 @@ bash train.sh 1 --cfg ./configs/cifar10_k2048_lr001.yaml
 If you find our work helpful in your research, please cite it as:
 
 ```
-@article{zhou2023dr,
+@inproceedings{zhou2023dr,
   title={DR-Tune: Improving Fine-tuning of Pretrained Visual Models by Distribution Regularization with Semantic Calibration},
   author={Zhou, Nan and Chen, Jiaxin and Huang, Di},
-  journal={arXiv preprint arXiv:2308.12058},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={1547--1556},
   year={2023}
 }
 ```
